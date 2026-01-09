@@ -1,6 +1,7 @@
 ## Mobiiliohjelmointi natiiviteknologioilla (viikko 1)
 
 Viikkotehtävä 1, Tasklist: “Domain + Kotlin-harjoitukset + ensimmäinen Compose-näkymä”
+<br />https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week1/app/src/main/java/com/example/viikko1
 
 ### Datamalli
 
