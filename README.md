@@ -1,29 +1,24 @@
-## Mobiiliohjelmointi natiiviteknologioilla (viikko 1)
+## Mobiiliohjelmointi natiiviteknologioilla (viikko 2)
 
-Viikkotehtävä 1, Tasklist: “Domain + Kotlin-harjoitukset + ensimmäinen Compose-näkymä”
-<br />https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week1/app/src/main/java/com/example/viikko1
+Viikkotehtävä 2, ViewModel:
+<br />https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week2/app/src/main/java/com/example/viikko2
 
-### Datamalli
+## Compose ja ViewModel
 
-Sovellukseen tehty Task data class tehtävien esittämiseen, missä seuraavat kentät:
-- **id** (yksilöi tehtävän tunnisteella)
-- **title** (tehtävän otsikko)
-- **description** (tehtävän kuvaus)
-- **priority** (tehtävän tärkeys 1-3 asteikolla)
-- **dueDate** (tehtävän deadline, esim: 2026-01-09)
-- **done** (tieto tehtävän suorituksesta, true/false)
-
-### Kotlin-funktiot
-
-Seuraavat funktiot käsittelevät tehtävälistaa:
-
-- **addTask(list, task)**: Lisää uuden tehtävän ja palauttaa uuden listan.
-- **toggleDone(list, id)**: Vaihtaa annetun id:n mukaisen tehtävän tilan. done = true/false.
-- **filterByDone(list, done)**: Suodattaa tehtävät tehdyn tilan perusteella. Kun käytössä, niin sovellus listaa ensin ne tehtävät, jotka ovat jo tehty.
-- **sortByDueDate(list)**: Järjestää tehtävät deadlinen mukaan niin, että lähin deadline tulee ensin.
-
-## Compose-tilanhallinta
+### Compose-tilanhallinta
 
 Jetpack Composessa käyttöliittymä perustuu tilaan (state). Kun tila muuttuu, Compose piirtää käyttöliittymän automaattisesti uudelleen.
 
-Aluksi tilaa voi hallita 'remember'-muuttujilla, mutta tämä toimii vain Composable-funktion elinkaaren ajan.
+Aluksi tilaa voi hallita 'remember'-muuttujilla, mutta tämä toimii vain Composable-funktion elinkaaren ajan. Eli konfiguraatiomuutoksissa (esim. näytön kääntyminen) arvo katoaa.
+
+### ViewModel
+
+ViewModelia käytetään, koska:
+- se säilyttää tilan konfiguraatiomuutoksissa (esim. näytön kääntö). 'remember'-muuttujan käyttö ei tätä mahdollista.
+- erottaa käyttöliittymän ja sovelluslogiikan toisistaan
+- tekee koodista testattavampaa ja selkeämpää
+
+Tässä sovelluksessa ViewModel sisältää tehtävälistan tilan,
+ja UI reagoi automaattisesti tilan muutoksiin.
+
+<b>remember</b> sopii yksittäisten komponenttien tilan hallintaan lyhytaikaisesti, kun taas <b>ViewModel</b> soveltuu tuotantosovelluksiin, kun tila pitää säilyttää ja eriyttää logiikka UI:sta.
