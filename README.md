@@ -1,5 +1,7 @@
 ## Mobiiliohjelmointi natiiviteknologioilla (viikko 4)
 
+https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week3/app/src/main/java/com/example/viikko4
+
 ### Navigointi
 
 Navigointi Jetpack Composessa tarkoittaa screenien välillä siirtymistä ilman perinteistä Fragment-pohjaista navigointia. Navigointi toteutetaan tilapohjaisesti eli UI reagoi navigaatiotilan muutoksiin.
@@ -43,3 +45,4 @@ Tehtävien lisääminen ja muokkaaminen tapahtuu **AlertDialogilla**.
 * **DetailDialog** avautuu, kun olemassa olevaa tehtävää painetaan
 
 Dialogit kutsuvat ViewModelin metodeja (**addTask**, **updateTask**, **removeTask**) jolloin tila päivittyy ja UI reagoi automaattisesti.
+
