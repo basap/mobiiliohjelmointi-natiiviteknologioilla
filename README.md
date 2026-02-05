@@ -1,6 +1,6 @@
 ## Mobiiliohjelmointi natiiviteknologioilla (viikko 4)
 
-https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week3/app/src/main/java/com/example/viikko4
+https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week4/app/src/main/java/com/example/viikko4
 
 ### Navigointi
 
@@ -45,4 +45,5 @@ Tehtävien lisääminen ja muokkaaminen tapahtuu **AlertDialogilla**.
 * **DetailDialog** avautuu, kun olemassa olevaa tehtävää painetaan
 
 Dialogit kutsuvat ViewModelin metodeja (**addTask**, **updateTask**, **removeTask**) jolloin tila päivittyy ja UI reagoi automaattisesti.
+
 
