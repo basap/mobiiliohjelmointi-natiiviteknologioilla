@@ -15,44 +15,38 @@ import com.example.viikko4.view.HomeScreen
 import com.example.viikko4.viewmodel.TaskViewModel
 import com.example.viikko4.view.theme.Viikko4Theme
 
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             Viikko4Theme {
-                AppNavigation()
+
+                val navController = rememberNavController()
+                val taskViewModel: TaskViewModel = viewModel()
+
+                NavHost(
+                    navController = navController,
+                    startDestination = ROUTE_HOME
+                ) {
+                    composable(ROUTE_HOME) {
+                        HomeScreen(
+                            viewModel = taskViewModel,
+                            onOpenCalendar = {
+                                navController.navigate(ROUTE_CALENDAR)
+                            }
+                        )
+                    }
+                    composable(ROUTE_CALENDAR) {
+                        CalendarScreen(
+                            viewModel = taskViewModel,
+                            onBack = {
+                                navController.popBackStack()
+                            }
+                        )
+                    }
+                }
             }
         }
     }
-}
-
-@Composable
-fun AppNavigation() {
-    val navController = rememberNavController()
-    val taskViewModel: TaskViewModel = viewModel()
-
-    NavHost(
-        navController = navController,
-        startDestination = ROUTE_HOME
-    ) {
-        composable(ROUTE_HOME) {
-            HomeScreen(
-                viewModel = taskViewModel,
-                onOpenCalendar = {
-                    navController.navigate(ROUTE_CALENDAR)
-                }
-            )
-        }
-        composable(ROUTE_CALENDAR) {
-            CalendarScreen(
-                viewModel = taskViewModel,
-                onBack = {
-                    navController.popBackStack()
-                }
-            )
-        }
-    }
-
 }
