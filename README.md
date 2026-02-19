@@ -8,6 +8,7 @@ Huomioithan että jokaiselle viikkotehtävälle on oma branch!
 - [Viikko 2](https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week2)
 - [Viikko 3](https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week3)
 - [Viikko 4](https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week4)
-
+- [Viikko 5](https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week5)
+- [Viikko 6](https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week6)
 
 
