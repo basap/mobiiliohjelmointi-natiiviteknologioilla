@@ -56,3 +56,8 @@ MainActivity.kt
 - ViewModelin StateFlow päivittyy.
 - Compose UI tekee recomposen automaattisesti.
 
+### Video
+
+[![video](https://img.youtube.com/vi/54zPjtGmPaA/0.jpg)](https://www.youtube.com/watch?v=54zPjtGmPaA)
+
+
