@@ -1,7 +1,7 @@
 ## Mobiiliohjelmointi natiiviteknologioilla (viikko 6)
 
 Viikkotehtävä 6, Room:
-<br />https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week2/app/src/main/java/com/example/viikko2
+<br />https://github.com/basap/mobiiliohjelmointi-natiiviteknologioilla/tree/week6/app/src/main/java/com/example/viikko6
 
 ## Room
 
@@ -55,3 +55,4 @@ MainActivity.kt
 - Room päivittää Flow:n automaattisesti.
 - ViewModelin StateFlow päivittyy.
 - Compose UI tekee recomposen automaattisesti.
+
